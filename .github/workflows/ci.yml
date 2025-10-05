@@ -1,0 +1,27 @@
+name: urbanflow-ci
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r urbanflow_advanced/requirements-dev.txt
+      - run: pytest urbanflow_advanced/tests
+
+  terraform:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+      - run: terraform -chdir=urbanflow_advanced/terraform fmt -check
+      - run: terraform -chdir=urbanflow_advanced/terraform init -backend=false
+      - run: terraform -chdir=urbanflow_advanced/terraform validate
+

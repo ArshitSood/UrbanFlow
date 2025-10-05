@@ -1,0 +1,12 @@
+[
+  {
+    "trip_date": "2026-01-01",
+    "pickup_hour": "2026-01-01T08:00:00",
+    "service_type": "yellow",
+    "pickup_location_id": 132,
+    "trip_count": 1,
+    "passenger_count": 1,
+    "avg_duration_minutes": 18.0
+  }
+]
+

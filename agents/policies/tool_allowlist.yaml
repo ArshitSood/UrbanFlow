@@ -1,0 +1,22 @@
+agents:
+  analytics:
+    tools:
+      - overview.lookup
+      - lineage.lookup
+  data_quality:
+    tools:
+      - quality.runs
+      - lineage.lookup
+  pipeline_ops:
+    tools:
+      - pipeline.runs
+      - lineage.lookup
+  cost_performance:
+    tools:
+      - overview.lookup
+      - lineage.lookup
+write_actions:
+  default_enabled: false
+  required_confirmation: true
+  required_rbac_permission: operations:write
+

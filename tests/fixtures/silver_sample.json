@@ -1,0 +1,15 @@
+[
+  {
+    "service_type": "yellow",
+    "pickup_at": "2026-01-01T08:00:00",
+    "dropoff_at": "2026-01-01T08:18:00",
+    "trip_date": "2026-01-01",
+    "pickup_location_id": 132,
+    "dropoff_location_id": 237,
+    "passenger_count": 1,
+    "trip_distance_miles": 12.4,
+    "trip_duration_minutes": 18.0,
+    "total_amount": 58.25
+  }
+]
+

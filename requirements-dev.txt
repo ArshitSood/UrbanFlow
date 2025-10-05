@@ -1,0 +1,12 @@
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+pydantic==2.10.4
+pydantic-settings==2.7.0
+pytest==8.3.4
+httpx==0.28.1
+pyarrow==18.1.0
+pyspark==3.5.3
+google-cloud-storage==2.19.0
+google-cloud-bigquery==3.27.0
+python-json-logger==3.2.1
+

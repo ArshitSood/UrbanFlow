@@ -1,0 +1,30 @@
+version: 2
+
+sources:
+  - name: silver
+    schema: "{{ target.schema }}"
+    tables:
+      - name: canonical_trips
+
+models:
+  - name: stg_canonical_trips
+    description: Canonical validated TLC trips at one row per source trip record.
+    columns:
+      - name: service_type
+        tests: [not_null]
+      - name: pickup_at
+        tests: [not_null]
+      - name: dropoff_at
+        tests: [not_null]
+      - name: pickup_location_id
+        tests: [not_null]
+      - name: dropoff_location_id
+        tests: [not_null]
+  - name: hourly_zone_demand
+    description: Hourly pickup demand by zone and service type.
+    columns:
+      - name: trip_date
+        tests: [not_null]
+      - name: service_type
+        tests: [not_null]
+

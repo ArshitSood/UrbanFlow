@@ -1,0 +1,23 @@
+silver:
+  - code: malformed_pickup_timestamp
+    severity: critical
+    description: Pickup timestamp must parse into a valid timestamp.
+  - code: malformed_dropoff_timestamp
+    severity: critical
+    description: Dropoff timestamp must parse into a valid timestamp.
+  - code: non_positive_duration
+    severity: critical
+    description: Dropoff must be after pickup.
+  - code: missing_pickup_location
+    severity: critical
+    description: Pickup location ID is required for canonical trip analytics.
+  - code: missing_dropoff_location
+    severity: critical
+    description: Dropoff location ID is required for canonical trip analytics.
+  - code: negative_distance
+    severity: critical
+    description: Trip distance cannot be negative.
+  - code: negative_total_amount
+    severity: warning
+    description: Total amount is negative and must be reviewed before revenue publication.
+
